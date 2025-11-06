@@ -33,7 +33,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${redHat.variable} antialiased bg-black`}
+        className={`${geistSans.variable} ${geistMono.variable} ${redHat.variable} antialiased`}
       >
         {/* Header stays full width */}
         <div>

@@ -8,6 +8,7 @@ Rich Dark Corn - #182511
 "use client"
 
 import TiltedCard from '@/app/components/TiltedCard';
+import PageBackground from '@/app/components/PageBackground';
 import image1 from '@/public/images/20230718_115217.jpg'
 import image2 from '@/public/images/20230718_125956.jpg'
 import image3 from '@/public/images/20240408_151357.jpg'
@@ -29,7 +30,8 @@ const pictures = [
 
 export default function gallery() {
     return (
-        <div className="w-full h-full bg-[#799AE0]">
+        <>
+            <PageBackground color="#799AE0" />
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 py-8">
                 {pictures.map((point, index) => (
                     <TiltedCard
@@ -48,6 +50,6 @@ export default function gallery() {
                     />
                 ))}
             </div>
-        </div>
+        </>
     );
 }
