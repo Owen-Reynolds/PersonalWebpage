@@ -35,8 +35,8 @@ export default function gallery() {
                     rotateAmplitude={6}
                     scaleOnHover={1.05}
                     showMobileWarning={false}
-                    showTooltip={true}
-                    displayOverlayContent={true}
+                    showTooltip={false}
+                    displayOverlayContent={false}
                 />
             ))}
         </div>

@@ -23,11 +23,15 @@ export default function Header(){
     }, []);
     return( 
         <header className="flex justify-center w-full">
-            <div className="flex items-center justify-between rounded-full mt-8 p-5 w-4/5 font-clancy bg-[#db4739] text-white">
+            <div className="flex items-center justify-between rounded-full mt-8 p-5 w-4/5 redhat-font bg-[#db4739] text-white">
                 <div className="">
-                    <h2 className="">Owen Reynolds</h2>
+                    <Link
+                        href={"/"}
+                        className="">
+                        Owen Reynolds
+                    </Link>
                 </div>
-                <div className="flex gap-5">
+                <div className="flex gap-10">
                     <Link
                         href={"/projects"}>
                         Projects
