@@ -1,1 +1,14 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'clancy';
+  src: url('/fonts/Overcompensate.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Recommended: prevents FOIT */
+}
+
+/* Utility class so your Header can use `className="font-clancy"` */
+.font-clancy {
+  font-family: 'clancy', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
