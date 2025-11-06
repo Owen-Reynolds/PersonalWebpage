@@ -1,9 +1,10 @@
 import type { SpringOptions } from 'motion/react';
+import Image from 'next/image';
 import { useRef, useState } from 'react';
 import { motion, useMotionValue, useSpring } from 'motion/react';
 
 interface TiltedCardProps {
-  imageSrc: React.ComponentProps<'img'>['src'];
+  imageSrc: string;
   altText?: string;
   captionText?: string;
   containerHeight?: React.CSSProperties['height'];
@@ -116,14 +117,17 @@ export default function TiltedCard({
           scale
         }}
       >
-        <motion.img
+        {/* NEXT/IMAGE REPLACEMENT */}
+        <Image
           src={imageSrc}
           alt={altText}
-          className="absolute top-0 left-0 object-cover rounded-[15px] will-change-transform [transform:translateZ(0)]"
-          style={{
-            width: imageWidth,
-            height: imageHeight
-          }}
+          fill
+          className="object-cover rounded-[15px] will-change-transform [transform:translateZ(0)]"
+          sizes="(max-width: 768px) 90vw, 300px"
+          quality={90}
+          priority
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkYPhfDwAChwGA60e6kgAAAABJRU5ErkJggg=="
         />
 
         {displayOverlayContent && overlayContent && (
