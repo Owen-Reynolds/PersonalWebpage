@@ -28,11 +28,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-black`}
       >
-        <div className="">
+        {/* Header stays full width */}
+        <div>
           <Header />
         </div>
 
-        {children}
+        {/* Main content gets centered with w-4/5 */}
+        <main className="flex justify-center">
+          <div className="w-4/5">
+            {children}
+          </div>
+        </main>
       </body>
     </html>
   );

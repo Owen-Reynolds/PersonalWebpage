@@ -1,36 +1,33 @@
 "use client"
 
 import TiltedCard from '@/app/components/TiltedCard';
+import image1 from '@/public/images/20230718_115217.jpg'
+import image2 from '@/public/images/20230718_125956.jpg'
+import image3 from '@/public/images/20240408_151357.jpg'
 
 const pictures = [
-    "https://i.scdn.co/image/ab67616d0000b273d9985092cd88bffd97653b58", 
+    image1, image2, image3
 ]
 
-export default function gallery(){
-    return(
-        <div className="flex justify-center w-4/5">
-            {pictures.map((point, index) =>(
+export default function gallery() {
+    return (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 py-8">
+            {pictures.map((point, index) => (
                 <TiltedCard
-                    imageSrc={point}
-                    altText="Kendrick Lamar - GNX Album Cover"
-                    captionText="Kendrick Lamar - GNX"
+                    key={index}
+                    imageSrc={point.src}
+                    altText={`Gallery image ${index + 1}`}
                     containerHeight="300px"
                     containerWidth="300px"
                     imageHeight="300px"
                     imageWidth="300px"
-                    rotateAmplitude={12}
-                    scaleOnHover={1.2}
+                    rotateAmplitude={6}
+                    scaleOnHover={1}
                     showMobileWarning={false}
                     showTooltip={true}
                     displayOverlayContent={true}
-                    overlayContent={
-                    <p className="tilted-card-demo-text">
-                    Kendrick Lamar - GNX
-                    </p>
-                }
                 />
             ))}
-            
         </div>
-    )
-}  
+    );
+}
