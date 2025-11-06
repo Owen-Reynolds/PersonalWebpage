@@ -6,7 +6,6 @@ const aboutItem = [
         subtitle: "",
         description: "",
         image: {},
-        
     },
     {
 

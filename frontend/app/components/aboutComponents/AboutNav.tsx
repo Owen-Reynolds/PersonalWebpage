@@ -1,35 +1,40 @@
-import AboutNavIcon from "./aboutNavIcon"
+import AboutNavIcon from "./AboutNavIcon"
+
+import musicArtistIcon from "@/public/icons/microphone.png"
+import songIcon from "@/public/icons/musical-note.png"
+import movieIcon from "@/public/icons/video-camera.png"
+import tvIcon from "@/public/icons/tv.png"
+import sportIcon from "@/public/icons/running.png"
 
 const icons = [
     {
-        image: "",
+        image: musicArtistIcon,
         title: "Music Artist"
     },
     {
-        image: "",
+        image: songIcon,
         title: "Song"
     },
     {
-        image: "",
+        image: movieIcon,
         title: "Movie"
     },
     {
-        image: "",
+        image: tvIcon,
         title: "Tv Show"
     },
     {
-        image: "",
+        image: sportIcon,
         title: "Sport"
     },
 ];
 
 export default function aboutNav(){
     return(
-        <div className="">
+        <div className="flex flex-col bg-white">
             {icons.map((point, index) => (
                 <AboutNavIcon iconImage={point.image} iconTitle={point.title} key={index} />
             ))}
-            
         </div>
     )
 }

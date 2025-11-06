@@ -1,7 +1,7 @@
 import Image from "next/image"
 
 type AboutNavIconProps = {
-    iconImage: string
+    iconImage: any
     iconTitle: string
 }
 
@@ -14,6 +14,7 @@ export default function aboutNavIcon({ iconImage, iconTitle }: AboutNavIconProps
                 height={100}
                 alt={iconTitle} 
             />
+            <h3>{iconTitle}</h3>
         </div>
     )
 }
