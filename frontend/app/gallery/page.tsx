@@ -29,23 +29,25 @@ const pictures = [
 
 export default function gallery() {
     return (
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 py-8">
-            {pictures.map((point, index) => (
-                <TiltedCard
-                    key={index}
-                    imageSrc={point.src}
-                    altText={`Gallery image ${index + 1}`}
-                    containerHeight="300px"
-                    containerWidth="100%"
-                    imageHeight="300px"
-                    imageWidth="100%"
-                    rotateAmplitude={6}
-                    scaleOnHover={1.05}
-                    showMobileWarning={false}
-                    showTooltip={false}
-                    displayOverlayContent={false}
-                />
-            ))}
+        <div className="w-full h-full bg-[#799AE0]">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 py-8">
+                {pictures.map((point, index) => (
+                    <TiltedCard
+                        key={index}
+                        imageSrc={point.src}
+                        altText={`Gallery image ${index + 1}`}
+                        containerHeight="300px"
+                        containerWidth="100%"
+                        imageHeight="300px"
+                        imageWidth="100%"
+                        rotateAmplitude={6}
+                        scaleOnHover={1.05}
+                        showMobileWarning={false}
+                        showTooltip={false}
+                        displayOverlayContent={false}
+                    />
+                ))}
+            </div>
         </div>
     );
 }

@@ -23,7 +23,7 @@ export default function Header(){
     }, []);
     return( 
         <header className="flex justify-center w-full">
-            <div className="flex items-center justify-between rounded-full mt-8 p-5 w-4/5 redhat-font bg-[#db4739] text-white">
+            <div className="flex items-center justify-between rounded-full mt-8 p-5 w-4/5 redhat-font bg-gray-500 text-white">
                 <div className="">
                     <Link
                         href={"/"}
