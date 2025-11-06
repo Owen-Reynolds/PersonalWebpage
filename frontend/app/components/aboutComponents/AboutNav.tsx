@@ -31,7 +31,7 @@ const icons = [
 
 export default function aboutNav(){
     return(
-        <div className="flex flex-col bg-white">
+        <div className="flex flex-col bg-white w-1/10">
             {icons.map((point, index) => (
                 <AboutNavIcon iconImage={point.image} iconTitle={point.title} key={index} />
             ))}

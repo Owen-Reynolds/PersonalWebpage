@@ -7,7 +7,7 @@ type AboutNavIconProps = {
 
 export default function aboutNavIcon({ iconImage, iconTitle }: AboutNavIconProps){
     return(
-        <div className="">
+        <div className="flex flex-col justify-center items-center">
             <Image 
                 src={iconImage}
                 width={100}

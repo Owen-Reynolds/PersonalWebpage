@@ -1,3 +1,10 @@
+/*Interstellar Cornfield Color Palette
+Light Sky Blue - #799AE0
+Light Army Green - #616F42
+Dark Truck Navy - #2C383E
+Rich Dark Corn - #182511
+*/
+
 "use client"
 
 import TiltedCard from '@/app/components/TiltedCard';
